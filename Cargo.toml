@@ -1,0 +1,29 @@
+[package]
+name = "send-notifications-chatgpt-plugin"
+version = "0.1.0"
+edition = "2021"
+authors = ["jlvihv<imvihv@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aws-config = "0.55.2"
+aws-sdk-s3 = "0.27.0"
+axum = "0.6.18"
+lambda-web = { version = "0.2.1", features = ["hyper"] }
+lambda_runtime = "0.8.0"
+reqwest = { version = "0.11.17", features = ["native-tls-vendored"] }
+serde = "1.0.163"
+serde_json = "1.0.96"
+tokio = { version = "1.28.1", features = ["macros"] }
+tracing = { version = "0.1.37", features = ["log"] }
+tracing-subscriber = { version = "0.3.17", features = [
+    "fmt",
+], default-features = false }
+
+[profile.release]
+strip = true
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "z"
