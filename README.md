@@ -2,6 +2,8 @@
 
 Send Notifications ChatGPT Plugin is a plugin for OpenAI's ChatGPT that allows users to send notifications to any topic via ntfy.sh.
 
+[Plugin Address](https://cimh4hhtaljvm24cgbbvkwl2gu0eeqkz.lambda-url.us-west-1.on.aws)
+
 ![Send Notifications ChatGPT Plugin](example.png)
 
 ## Features
