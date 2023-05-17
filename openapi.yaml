@@ -1,0 +1,35 @@
+openapi: 3.0.1
+info:
+  title: Ntfy.sh Notifications API
+  description: An API that allows sending notifications to users via ntfy.sh.
+  version: "v1"
+servers:
+  - url: https://cimh4hhtaljvm24cgbbvkwl2gu0eeqkz.lambda-url.us-west-1.on.aws
+    description: Production server
+paths:
+  /{topic}:
+    post:
+      operationId: sendNotification
+      summary: Send a notification to a specific topic
+      parameters:
+        - in: path
+          name: topic
+          schema:
+            type: string
+          required: true
+          description: The topic to which the notification should be sent.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: The message to be sent as a notification.
+      responses:
+        "200":
+          description: OK
+        "500":
+          description: Internal Server Error

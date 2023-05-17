@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Send Notifications",
+    "name_for_model": "send_notifications",
+    "description_for_human": "Plugin for sending notifications to users via ntfy.sh. You can send notifications to any topic.",
+    "description_for_model": "Plugin for sending notifications to users via ntfy.sh. You can send notifications to any topic.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://cimh4hhtaljvm24cgbbvkwl2gu0eeqkz.lambda-url.us-west-1.on.aws/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "https://ntfy.sh/_next/static/media/logo.077f6a13.svg",
+    "contact_email": "imvihv@gmail.com",
+    "legal_info_url": "https://cimh4hhtaljvm24cgbbvkwl2gu0eeqkz.lambda-url.us-west-1.on.aws/legal"
+}
